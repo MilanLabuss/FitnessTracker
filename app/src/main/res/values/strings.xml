@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">PolemistesFitness</string>
+    <string name="weight">Weight</string>
+    <string name="reps">Reps</string>
+    <string name="submit">Submit</string>
+    <string name="textview">TextView</string>
+    <string name="exercisename">ExerciseName</string>
+    <string name="repscomma">Reps</string>
+    <string name="weighttxt">Weight</string>
+    <string name="repsc">Reps:</string>
+    <string name="weightcomma">Weight:</string>
+    <string name="date">Date:</string>
+    <string name="title">Title</string>
+    <string name="todo">TODO</string>
+    <string name="todays_sets">Todays Sets</string>
+    <string name="total_weight">Total Weight</string>
+    <string name="todays_workout">Todays Workout</string>
+
+
+    <string-array name="muscleGroup_names">
+        <item>Chest</item>
+        <item>Arms</item>
+        <item>Back</item>
+        <item>Legs</item>
+        <item>Shoulders</item>
+    </string-array>
+    <string-array name="chest_names">
+        <item>Bench Press</item>
+        <item>Close Grib Bench</item>
+        <item>Decline Bench Press</item>
+        <item>Incline Bench Press</item>
+        <item>Decline Dumbbell Press</item>
+        <item>Incline Dumbbell Press</item>
+    </string-array>
+    <string-array name="back_names">
+        <item>Barbell Row</item>
+        <item>Dumbbell Row</item>
+        <item>Lat Pulldown</item>
+        <item>Rear Delt Flies</item>
+        <item>Deadlift</item>
+        <item>Stiff Leg Deadlift</item>
+    </string-array>
+    <string-array name="arm_names">
+        <item>Barbell Curl</item>
+        <item>Hammer Curl</item>
+        <item>Dumbbell Curl</item>
+        <item>Cable Curl</item>
+        <item>Skull Crushers</item>
+        <item>Dumbbell Crushers</item>
+    </string-array>
+    <string-array name="leg_names">
+        <item>Calf Raises</item>
+        <item>Front Squat</item>
+        <item>Hamstring Curl</item>
+        <item>Leg Extension</item>
+        <item>Leg Press</item>
+        <item>Back Squat</item>
+    </string-array>
+    <string-array name="shoulder_names">
+        <item>One Arm Press</item>
+        <item>Dumbbell Raises</item>
+        <item>Military Press</item>
+        <item>Press Machine</item>
+        <item>Front Raises</item>
+        <item>Side Lateral Raises</item>
+    </string-array>
+</resources>
