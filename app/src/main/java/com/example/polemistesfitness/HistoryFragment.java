@@ -54,13 +54,31 @@ public class HistoryFragment extends Fragment {
 
         calendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
-            public void onSelectedDayChange(@NonNull CalendarView calendarview, int i, int i1,int i2) {
+            public void onSelectedDayChange(@NonNull CalendarView calendarview, int Year, int Month,int Day) {
                 exercise_name = new ArrayList<>();
                 set_weight = new ArrayList<>();
                 set_reps = new ArrayList<>();
                 set_date= new ArrayList<>();
-            //formatting to dd/mm/yyyy
-                 date = i2 + "/" + (i1+1) + "/" + i;
+                //formatting to dd/mm/yyyy
+
+                String sYear = String.valueOf(Year);
+                String sMonth = String.valueOf((Month + 1));
+                String sDay = String.valueOf(Day);
+
+                if (sDay.length() == 1) {
+                    sDay = "0" + sDay;
+                }
+
+                if (sMonth.length() == 1) {
+                    sMonth = "0" + sMonth;
+                }
+                if (sDay.length() == 1){
+                    sDay = "0" + sDay;
+                }
+
+
+                date =   sDay + "/" + sMonth + "/" + sYear;
+
                 //month needs plus 1 because it starts at 0
                 tviewdate.setText(date);
                 storeDataDateinArrays();

@@ -74,11 +74,12 @@ public class HomeFragment extends Fragment {
 
 
         todaydate = sdf.format(new Date()).toString();
-        weekAgoDate = sdf.format(new Date(System.currentTimeMillis() - 7L * 24 * 3600 * 1000)).toString();
+        ///weekAgoDate = sdf.format(new Date(System.currentTimeMillis() - 7L * 24 * 3600 * 1000)).toString();
 
-        System.out.println("Week Ago Date: "+weekAgoDate);
+        //System.out.println("Week Ago Date: "+weekAgoDate);
         storeDatainArrays();
-        TotalSetsWeek(todaydate, weekAgoDate);
+        TotalSetsWeek(todaydate);
+
         dbadapter = new DBAdapter(getContext(),exercise_name ,set_weight,set_reps,set_date);
         recyclerView.setAdapter(dbadapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -90,8 +91,14 @@ public class HomeFragment extends Fragment {
             System.out.println("Total sets: " + total_weight.size());
         }
         //Fitness score is total number of sets by 2 in the month
-        //fitnessScore = (total_weight.size()*2);
-        fitnessScore = (totalMonthlyReps+totalMonthlyWeight)/(total_weight.size()*5);
+
+        if(totalMonthlyWeight==0){
+            fitnessScore=0;
+        }
+        else{
+            fitnessScore = ((totalMonthlyWeight+2)/(total_weight.size()+2));
+        }
+
 
         weighttxt =  view.findViewById(R.id.totalweighttxt);
         weighttxt.setText(String.valueOf(totalMonthlyWeight));
@@ -108,9 +115,9 @@ public class HomeFragment extends Fragment {
     }
 
     //Storing the data of the past week
-     void TotalSetsWeek(String todaydate, String weekAgoDate) {
+     void TotalSetsWeek(String todaydate) {
        //calling the method in db java class and storing it in cursor
-       Cursor cursor = mydb.TotalSetsWeek(todaydate,weekAgoDate);    //Im going to change this to read only todays Data
+       Cursor cursor = mydb.readDate(todaydate);    //Im going to change this to read only todays Data
        if(cursor.getCount() == 0){
            Toast.makeText(getContext(), "Start a Workout Today", Toast.LENGTH_SHORT).show();
        }
