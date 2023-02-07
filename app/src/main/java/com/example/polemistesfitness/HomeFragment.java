@@ -96,7 +96,9 @@ public class HomeFragment extends Fragment {
             fitnessScore=0;
         }
         else{
-            fitnessScore = ((totalMonthlyWeight+2)/(total_weight.size()+2));
+           // fitnessScore = ((totalMonthlyReps+totalMonthlyWeight) /(total_weight.size()));
+            fitnessScore = totalMonthlyReps+totalMonthlyWeight;
+
         }
 
 

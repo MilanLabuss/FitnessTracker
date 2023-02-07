@@ -26,19 +26,19 @@
     </string-array>
     <string-array name="chest_names">
         <item>Bench Press</item>
-        <item>Close Grib Bench</item>
-        <item>Decline Bench Press</item>
-        <item>Incline Bench Press</item>
-        <item>Decline Dumbbell Press</item>
-        <item>Incline Dumbbell Press</item>
+        <item>Close Grib</item>
+        <item>Decline Bench</item>
+        <item>Incline Bench</item>
+        <item>Decline Dumbbell</item>
+        <item>Incline Dumbbell</item>
     </string-array>
     <string-array name="back_names">
         <item>Barbell Row</item>
         <item>Dumbbell Row</item>
         <item>Lat Pulldown</item>
-        <item>Rear Delt Flies</item>
+        <item>Rear Flies</item>
         <item>Deadlift</item>
-        <item>Stiff Leg Deadlift</item>
+        <item>Stiff Deadlift</item>
     </string-array>
     <string-array name="arm_names">
         <item>Barbell Curl</item>
@@ -62,6 +62,6 @@
         <item>Military Press</item>
         <item>Press Machine</item>
         <item>Front Raises</item>
-        <item>Side Lateral Raises</item>
+        <item>Lateral Raises</item>
     </string-array>
 </resources>

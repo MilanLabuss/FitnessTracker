@@ -11,8 +11,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        app:cardCornerRadius="5dp"
-        app:cardElevation="10dp"
+        app:cardCornerRadius="17dp"
+        app:cardElevation="7dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,7 @@
                 android:layout_marginStart="8dp"
                 android:text="@string/exercisename"
                 android:textColor="#FFFFFF"
-                android:textSize="17sp"
+                android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -45,7 +45,7 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/repscomma"
                 android:textColor="#FFFFFF"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView3"
                 app:layout_constraintTop_toBottomOf="@+id/weight_txt"
@@ -58,7 +58,7 @@
                 android:layout_marginStart="16dp"
                 android:text="@string/weighttxt"
                 android:textColor="#FFFFFF"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@+id/textView2"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -84,7 +84,7 @@
                 android:layout_marginStart="153dp"
                 android:text="@string/weightcomma"
                 android:textColor="#FFFFFF"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -96,7 +96,7 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/repsc"
                 android:textColor="#FFFFFF"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView2"
