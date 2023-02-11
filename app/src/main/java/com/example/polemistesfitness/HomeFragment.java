@@ -121,6 +121,7 @@ public class HomeFragment extends Fragment {
        //calling the method in db java class and storing it in cursor
        Cursor cursor = mydb.readDate(todaydate);    //Im going to change this to read only todays Data
        if(cursor.getCount() == 0){
+
            Toast.makeText(getContext(), "Start a Workout Today", Toast.LENGTH_SHORT).show();
        }
        //Here we read the columns by their number

@@ -34,14 +34,40 @@ public class LogSet extends AppCompatActivity {
         weight_input = findViewById(R.id.weighttxt);
         reps_input = findViewById(R.id.repstxt);
         submitbtn = findViewById(R.id.logsetbtn);
+        CharSequence Emptytext = "Please input number";
+        int duration = Toast.LENGTH_SHORT;
+        Toast toastEmpty = Toast.makeText(this, Emptytext, duration);
+
+        CharSequence DoYoutext = "Do you even lift";
+        Toast toastDoYou = Toast.makeText(this, DoYoutext, duration);
+
+        CharSequence BeRealtext = "Be Realistic";
+        Toast toastBeReal = Toast.makeText(this, BeRealtext, duration);
         submitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DatabaseHelper mydb = new DatabaseHelper(LogSet.this);
-                mydb.addSet(ename,
-                        Integer.valueOf(weight_input.getText().toString()),
-                        Integer.valueOf(reps_input.getText().toString()),
-                        sdf.format(new Date()).toString());
+
+                if((weight_input.getText().toString().trim().length() <= 0) || (reps_input.getText().toString().trim().length() <= 0) ){
+                    toastEmpty.show();
+                }
+                else if( Integer.valueOf(weight_input.getText().toString()) < 1 ||
+                Integer.valueOf(reps_input.getText().toString()) <1 ){
+                    toastDoYou.show();
+                }
+                else if (Integer.valueOf(weight_input.getText().toString()) > 10000 ||
+                        Integer.valueOf(reps_input.getText().toString()) > 10000 ) {
+                    toastBeReal.show();
+                }
+                else{
+
+                    mydb.addSet(ename,
+                            Integer.valueOf(weight_input.getText().toString()),
+                            Integer.valueOf(reps_input.getText().toString()),
+                            sdf.format(new Date()).toString());
+
+                }
+
             }
         });
 
