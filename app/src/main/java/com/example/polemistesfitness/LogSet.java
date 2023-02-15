@@ -38,8 +38,8 @@ public class LogSet extends AppCompatActivity {
         int duration = Toast.LENGTH_SHORT;
         Toast toastEmpty = Toast.makeText(this, Emptytext, duration);
 
-        CharSequence DoYoutext = "Do you even lift";
-        Toast toastDoYou = Toast.makeText(this, DoYoutext, duration);
+        //CharSequence DoYoutext = "Do you even lift";
+        //Toast toastDoYou = Toast.makeText(this, DoYoutext, duration);
 
         CharSequence BeRealtext = "Be Realistic";
         Toast toastBeReal = Toast.makeText(this, BeRealtext, duration);
@@ -47,26 +47,51 @@ public class LogSet extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 DatabaseHelper mydb = new DatabaseHelper(LogSet.this);
+             //   if() {
+                    String Weightvalue = weight_input.getText().toString().trim();
+                    String Repsvalue = reps_input.getText().toString().trim();
 
-                if((weight_input.getText().toString().trim().length() <= 0) || (reps_input.getText().toString().trim().length() <= 0) ){
-                    toastEmpty.show();
-                }
-                else if( Integer.valueOf(weight_input.getText().toString()) < 1 ||
-                Integer.valueOf(reps_input.getText().toString()) <1 ){
-                    toastDoYou.show();
-                }
-                else if (Integer.valueOf(weight_input.getText().toString()) > 10000 ||
-                        Integer.valueOf(reps_input.getText().toString()) > 10000 ) {
-                    toastBeReal.show();
-                }
-                else{
 
-                    mydb.addSet(ename,
-                            Integer.valueOf(weight_input.getText().toString()),
-                            Integer.valueOf(reps_input.getText().toString()),
-                            sdf.format(new Date()).toString());
 
-                }
+
+                    int RepsInt=0;
+                    int weightInt=0;
+
+                    if(Weightvalue.equals("") || Weightvalue==null) {
+                        toastEmpty.show();
+                    }else{
+
+                        weightInt = Integer.parseInt(Weightvalue);
+                    }
+                    if(Repsvalue.equals("") || Repsvalue==null) {
+                        toastEmpty.show();
+                    }else{
+                        RepsInt = Integer.parseInt(Repsvalue);
+
+                    }
+
+
+
+                    if (weightInt == 0 || RepsInt == 0) {
+                        toastEmpty.show();
+                    } else if (weightInt > 10000 ||
+                            RepsInt > 10000) {
+                        toastBeReal.show();
+                    } else {
+
+                        mydb.addSet(ename,
+                                weightInt,
+                                RepsInt,
+                                sdf.format(new Date()));
+
+                     }
+
+                   // }
+               // else {
+
+              //  }
+
+
 
             }
         });
