@@ -22,15 +22,15 @@ public class ExercisesActivity extends AppCompatActivity {
     R.drawable.inclinebench, R.drawable.declinedumbell, R.drawable.inclinedumbellpress};
     String armNames[];
     int armImages[]={R.drawable.barbellcurls,R.drawable.hammercurls, R.drawable.dumbbellcurls,
-    R.drawable.cablecurls, R.drawable.skullcrushers, R.drawable.dumbelltricep};
+    R.drawable.cablecurls, R.drawable.skullcrushers};
     String backNames[];
-    int backImages[]={R.drawable.barbellrow, R.drawable.dumbbellrow,R.drawable.latpulldown,
+    int backImages[]={R.drawable.barbellrow,R.drawable.latpulldown,
     R.drawable.reardelt, R.drawable.deadlift,R.drawable.stifflegdead};
     String legNames[];
     int legImages[]={R.drawable.calfraise,R.drawable.frontsquat,R.drawable.hamstringcurl,
     R.drawable.legextension,R.drawable.legpress,R.drawable.squats};
     String shoulderNames[];
-    int shoulderImages[]={R.drawable.onearmpress,R.drawable.seateddumbbell,R.drawable.seatedmilitary,
+    int shoulderImages[]={R.drawable.seateddumbbell,R.drawable.seatedmilitary,
     R.drawable.shouldermachine,R.drawable.barbbellraises,R.drawable.sidelaterals};
 
     String nm;      //this will store the name of the muscle group the user clicked on

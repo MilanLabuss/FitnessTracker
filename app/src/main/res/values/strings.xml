@@ -34,7 +34,7 @@
     </string-array>
     <string-array name="back_names">
         <item>Barbell Row</item>
-        <item>Dumbbell Row</item>
+
         <item>Lat Pulldown</item>
         <item>Rear Flies</item>
         <item>Deadlift</item>
@@ -46,7 +46,7 @@
         <item>Dumbbell Curl</item>
         <item>Cable Curl</item>
         <item>Skull Crushers</item>
-        <item>Dumbbell Crushers</item>
+
     </string-array>
     <string-array name="leg_names">
         <item>Calf Raises</item>
@@ -57,7 +57,7 @@
         <item>Back Squat</item>
     </string-array>
     <string-array name="shoulder_names">
-        <item>One Arm Press</item>
+
         <item>Dumbbell Raises</item>
         <item>Military Press</item>
         <item>Press Machine</item>
