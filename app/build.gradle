@@ -10,8 +10,8 @@ android {
         applicationId "com.tanxe.polemistesfitness"
         minSdk 29
         targetSdk 32
-        versionCode 9
-        versionName "9"
+        versionCode 10
+        versionName "10"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

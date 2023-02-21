@@ -8,7 +8,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:clickable="false">
 
         <CalendarView
             android:id="@+id/calendarView"
@@ -30,13 +31,13 @@
             android:text="Select Date"
             android:textColor="#050505"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/historyRecycle"
+            app:layout_constraintBottom_toTopOf="@+id/historyRecyclerView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/calendarView" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/historyRecycle"
+            android:id="@+id/historyRecyclerView"
             android:layout_width="0dp"
             android:layout_height="280dp"
             android:layout_marginStart="4dp"

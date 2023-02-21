@@ -54,7 +54,7 @@ public class HomeFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-       recyclerView = (RecyclerView) view.findViewById(R.id.homerecycle);
+       recyclerView = (RecyclerView) view.findViewById(R.id.homerecyclerView);
 
        //resetting in case a new set was added
         totalMonthlyReps=0;

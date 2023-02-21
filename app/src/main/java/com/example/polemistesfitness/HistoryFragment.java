@@ -41,11 +41,12 @@ public class HistoryFragment extends Fragment {
 
          calendar = (CalendarView) v.findViewById(R.id.calendarView); // get the reference of CalendarView
         //i need to get the date the user picks so i can search for it in
+
         //in my database object date==date
         tviewdate = v.findViewById(R.id.datetxt);
 
 
-        recyclerView = (RecyclerView) v.findViewById(R.id.historyRecycle);
+        recyclerView = (RecyclerView) v.findViewById(R.id.historyRecyclerView);
 
         mydb = new DatabaseHelper(getContext());
 
