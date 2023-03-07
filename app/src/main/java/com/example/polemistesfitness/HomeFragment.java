@@ -78,6 +78,7 @@ public class HomeFragment extends Fragment {
 
         //System.out.println("Week Ago Date: "+weekAgoDate);
         storeDatainArrays();
+        //this needs to be on a Thread
         TotalSetsWeek(todaydate);
 
         dbadapter = new DBAdapter(getContext(),exercise_name ,set_weight,set_reps,set_date);
@@ -100,7 +101,6 @@ public class HomeFragment extends Fragment {
             fitnessScore = totalMonthlyReps+totalMonthlyWeight;
 
         }
-
 
         weighttxt =  view.findViewById(R.id.totalweighttxt);
         weighttxt.setText(String.valueOf(totalMonthlyWeight));
